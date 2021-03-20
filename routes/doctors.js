@@ -103,7 +103,7 @@ router.get("/showone", async (req, res) => {
 // @route Get api/doctors/delete
 // @desc delete doctor
 // @access Public
-//#######DELETE DOCTOR JEST PUBLIC PROSZE TO TYCHNMIAST ZMIENIC
+//#######DELETE DOCTOR JEST PUBLIC MUSZE TO ZMIENIC
 router.delete("/delete", async (req, res) => {
   const { doctorId } = req.body;
   const data = await Doctor.findByIdAndDelete(doctorId);
