@@ -37,10 +37,11 @@ router.post("/openhours", specjalAuth, async (req, res) => {
 // @desc Updatuje godziny otwarcia
 // @access Special private
 router.put("/openhours", specjalAuth, async (req, res) => {
-  const id = "6051c3bc9d5d205e7eeba9bd";
+  // const id = "6051c3bc9d5d205e7eeba9bd";
 
   try {
-    await OpenHours.findByIdAndUpdate(id, req.body);
+    // await OpenHours.findByIdAndUpdate(id, req.body);
+    await OpenHours.findOneAndUpdate(req.body);
     res.json("zaktualizowano");
   } catch (err) {
     res.send(err.message);
